@@ -1,0 +1,22 @@
+<h1>Longest#game</h1>
+
+
+<%= init_grid = @grid %>
+
+<br>
+<br>
+<br>
+
+<%= start_time = Time.now.strftime("%d/%m/%Y %H:%M") %>
+
+<br>
+
+<form action="/score" method="get">
+ <label for="question">What is your best attempt bro?</label>
+ <input type="text" id="question" name="attempt" placeholder="type your attempt">
+ <input type="hidden" name="start" value = '<%=start_time%>' >
+ <input type="hidden" name="grid" value = '<%=init_grid%>' >
+ <input type="submit" value="Go on!">
+
+</form>
+
